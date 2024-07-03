@@ -14,6 +14,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--allow-insecure-localhost')
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 # WebDriver 초기화
 driver = webdriver.Chrome(service=service, options=options)
